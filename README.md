@@ -2,7 +2,7 @@
 
 ### Mission
 
-We were asked to segment clients of an e-commerce platform using unsupervised models.
+We were asked to segment clients of an e-commerce platform using unsupervised models (clustering).
 
 As the segmentation had to be actionable by the marketing team, we needed to find the best trade-off between mathematically well-defined clusters and segment interpretability. 
 
