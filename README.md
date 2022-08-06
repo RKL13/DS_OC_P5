@@ -1,9 +1,12 @@
 # Segment clients of an e-commerce platform
 
-### Mission
+### Overview: Clustering of customers of an e-commerce database for the marketing team. 
+### Definition of a maintenance contract for the trained algorithm.
 
-We were asked to segment clients of an e-commerce platform using unsupervised models (clustering).
+The provided data set is relatively clean (one only has to do typical table joins with aggregations to avoid the duplication of individuals). The dataset allows the engineering of many possible features (sensibility to events, urban density, etc.). 
 
-As the segmentation had to be actionable by the marketing team, we needed to find the best trade-off between mathematically well-defined clusters and segment interpretability. 
+Several metrics can be helpful in the determination of clusters (Inertie, Silhouette), but the need for marketing actionability of the segments is prioritized here. Therefore, a parallel plot is extensively used to visualize the discriminational power of the models. 
 
-A thorough feature construction, selection, and transformation (avoiding traps such as using OHE with distance-metric models and applying ad hoc mathematical transformation, etc.) combined with a customer and market understanding were vital to reach the needed trade-off.
+Several unsupervised models (Kmeans, DBSCAN, Hierarchical Clustering) are compared over different feature selections (with a marketing's RFM feature selection as a baseline). A Kmeans with eight components allows defining eight segments that discriminate over hapiness, recency, cost sensitivity, delay of shipping, size of the basket, and sensitivity to events. 
+
+To define the maintenance contract, one can compare the predictions of the same model fitted with different amounts of data and study the evolution of the ARI score over time.
